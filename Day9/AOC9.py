@@ -15,3 +15,12 @@ for number in newLst[25:]:
         print(number)
         break
     runningIndex += 1
+
+target = 507622668
+
+for index in range(0, len(newLst)):
+    for index2 in range(index, len(newLst)):
+        potentialSet = newLst[index:index2]
+        if sum(potentialSet) == target:
+            print('min + max of the set is {}'.format(
+                min(potentialSet) + max(potentialSet)))
